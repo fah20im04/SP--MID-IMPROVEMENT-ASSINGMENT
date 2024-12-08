@@ -1,0 +1,16 @@
+#include <stdio.h>
+void swap(int *A,int *B)
+{
+    int temp = *A;
+    *A =*B;
+    *B =temp;
+}
+int main()
+{
+    int M, N;
+    scanf("%d%d",&M,&N);
+    swap(&M,&N);
+    printf("M = %d,N = %d\n",M,N);
+
+    return 0;
+}
