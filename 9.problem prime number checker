@@ -1,12 +1,22 @@
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
-    int num = 20;
-    int *ptr = &num;
-
-    printf("Value of num: %d\n", num);
-    printf("Address of num: %p\n", (void*)ptr);
-    printf("Value at address %p: %d\n", (void*)ptr, *ptr);
-
+    int x;
+    scanf("%d",&x);
+    if(x<2)
+    {
+        printf("%d is not prime",x);
+        return 0;
+    }
+    for(int i=2; i<=x/2; i++)
+    {
+        if(x%i==0)
+        {
+            printf("%d is not prime",x);
+            return 0;
+        }
+    }
+    printf("%d is prime",x);
     return 0;
+
 }
